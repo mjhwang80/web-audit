@@ -1,0 +1,8 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "reporters": ["cli", "json"]
+  },
+  "urls": ["http://dev2.indisystem.co.kr:7903/"]
+}
