@@ -19,7 +19,7 @@ jobs:
       - name: Run Audits
         run: |
           mkdir -p reports/lighthouse
-          lhci autorun || true
+          lhci autorun
           pa11y-ci --reporter pa11y-reporter-html > reports/pa11y-report.html || true
 
       - name: Upload Audit Reports

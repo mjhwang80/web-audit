@@ -107,3 +107,26 @@ git branch -M main
 git remote add origin https://github.com/사용자명/저장소명.git
 git push -u origin main
 ```
+
+
+## 실행
+``` Bash
+# 1. lhci 설정 검증 및 직접 실행
+npx @lhci/cli autorun --config=./lighthouserc.js
+# 405 에러 발생시
+npx lighthouse "http://dev2.indisystem.co.kr:7903/ko/html/datasvc/index.do" \
+  --preset=desktop \
+  --chrome-flags="--no-sandbox --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"" \
+  --output=html \
+  --output-path=./reports/lighthouse-report.html \
+  --view
+
+# 2. 파일 생성 확인
+ls -la reports/lighthouse
+
+
+npx lighthouse https://example.com --locale=ko --output=html --output-path=./reports/lighthouse-ko.html
+
+
+npx @axe-core/cli https://example.com --lang ko
+```

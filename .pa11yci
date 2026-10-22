@@ -1,8 +1,14 @@
 {
   "defaults": {
     "standard": "WCAG2AA",
-    "runners": ["axe", "htmlcs"],
-    "reporters": ["cli", "json"]
+    "timeout": 10000,
+    "runners": ["axe"],
+    "chromeLaunchConfig": {
+      "args": ["--lang=ko-KR", "--no-sandbox"]
+    },
+    "axe": {
+      "locale": "ko"
+    }
   },
   "urls": [
     "http://dev2.indisystem.co.kr:7903/",
