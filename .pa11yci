@@ -2,9 +2,10 @@
   "defaults": {
     "standard": "WCAG2AA",
     "timeout": 10000,
+    "wait": 3000,
     "runners": ["axe"],
     "chromeLaunchConfig": {
-      "args": ["--lang=ko-KR", "--no-sandbox"]
+      "args": ["--lang=ko-KR", "--no-sandbox" , "--disable-setuid-sandbox"]
     },
     "axe": {
       "locale": "ko"
@@ -42,6 +43,32 @@
     "http://dev2.indisystem.co.kr:7903/ko/html/cntnts/95/introduction/business.do",
     "http://dev2.indisystem.co.kr:7903/ko/html/cntnts/104/introduction/business.do",
     "http://dev2.indisystem.co.kr:7903/ko/html/cntnts/105/introduction/business.do",
-    "http://dev2.indisystem.co.kr:7903/ko/html/introduction/location.do"
+    "http://dev2.indisystem.co.kr:7903/ko/html/introduction/location.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/index.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/satellite/viewer/index.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/satellite/gis/index.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/datasvc/index.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/svc/openapi/explain.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/svc/openapi/insert.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/svc/openapi/createURL.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/satellite/program/introduce.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/satellite/program/introduce.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/25/satellite/introduction.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cntnts/59/outputs/overview.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/satellite/operation.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/board/bbs/24/list.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/board/bbs/23/list.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/board/gallery/22/list.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/board/bbs/28/list.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/mtg/workshop.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/16/introduction/greeting.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/introduction/hist.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/17/introduction/vision.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/introduction/orgnzt.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/18/introduction/business.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/19/introduction/business.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/20/introduction/business.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/cmmn/cntnts/21/introduction/business.do",
+    "http://dev2.indisystem.co.kr:7903/en/html/introduction/location.do"
    ]
 }

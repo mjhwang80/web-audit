@@ -21,6 +21,7 @@ mkdir web-audit && cd web-audit
 ``` Bash
 npm init -y
 npm install -g @lhci/cli pa11y-ci html-validate
+npm install -D pa11y-ci pa11y-reporter-html
 ```
 ### lighthouserc.js 생성
 ``` JavaScript
@@ -129,4 +130,25 @@ npx lighthouse https://example.com --locale=ko --output=html --output-path=./rep
 
 
 npx @axe-core/cli https://example.com --lang ko
+
+
+# JSON 출력으로 정상 데이터 수집 확인
+npx pa11y-ci --json > reports/pa11y-report.json
+
+# 단일 URL 대상 pa11y 직접 실행 시 (가장 안정적인 HTML 출력 방식)
+npx pa11y http://dev2.indisystem.co.kr:7903/ko/html/datasvc/index.do --reporter html > reports/pa11y-report.html
+
+npm run audit:lighthouse
+
+
+
+# 2. pa11y-ci 일괄 점검 실행 (결과를 JSON으로 저장)
+# (오류가 검출되어도 파이프가 끊기지 않도록 || true 추가)
+
+npx pa11y-ci --json > reports/pa11y-raw.json || true
+# 안되면 아래꺼 실행
+
+try { npx pa11y-ci --json | Out-File -FilePath reports/pa11y-raw.json -Encoding utf8 } catch { }
+# 3. 종합 HTML 보고서 생성
+node generate-pa11y-html.js
 ```

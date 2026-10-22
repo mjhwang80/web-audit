@@ -4,10 +4,16 @@
   "description": "``` cmd\r npm init -y\r npm install -g @lhci/cli pa11y-ci html-validate\r ```",
   "main": "lighthouserc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "audit:lighthouse": "lhci autorun && node generate-summary.js"
+    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "pa11y-ci": "^5.0.0",
+    "pa11y-reporter-html": "^2.0.0"
+  }
 }
